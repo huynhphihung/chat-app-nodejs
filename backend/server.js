@@ -20,7 +20,11 @@ const __dirname = path.resolve();
 
 // apply middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://chat-app-product-yzio.onrender.com",
+	})
+);
 app.use(cookieParser());
 
 // server routes
